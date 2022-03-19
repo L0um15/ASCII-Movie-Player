@@ -45,7 +45,7 @@ def main():
 
     video_capture = cv2.VideoCapture(video_file_path)
 
-    frame_rate = int(video_capture.get(cv2.CAP_PROP_FPS))
+    frame_rate = video_capture.get(cv2.CAP_PROP_FPS)
     fps_timer = FPSTimer(frame_rate)
 
     succ, image = video_capture.read()
